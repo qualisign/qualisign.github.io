@@ -1,0 +1,34 @@
+Outline:
+
+1. Problems
+2. Solution
+3. Use-Cases
+
+Problems:
+
+1. Fake news:
+News is a profitable business.  Narratives that trigger base instincts make more money than those that appeal to the faculties of complex reasoning - despite the fact that humanity is facing overwhelming challenges that will require us to deal in complexity rather than baseness.
+2. Greedy middle-men/gatekeepers:
+The de-facto designators of timely, important information of the public (i.e. news) are organizations like CNN, Fox, etc -- who are primarily interested in profit, not public service.  Blame can be put on individual organizations, reporters, CEO's, etc -- but it is more constructive to analyze this problem more generally, as one more example of a service operating ineffectively because control is centralized.  We've seen companies like Uber, AirBnB, etc. revolutionize their respective industries by creating an infrastructure for peer-to-peer interaction, such that customers become independent of prices set by centralized stake-holders.  It's time for this to happen with news, such that truth is no longer in the hands of biased stake-holders.
+
+
+
+Solution:
+
+If an effective solution to this problem existed, then the services of the above mentioned platforms and others (i.e. businesses that turn customers into suppliers) would also be open to improvement by aggregating them into a single listing service found in the classifieds section of the news app.  This would be like craigslist on steroids; real-time offers for transportation, housing, and other services could be found.  With a credit-system built in to the app, offers could be accepted and the app would function as an escrow service between customer-suppliers.  If this is based on blockchain technology, smart contracts can be used
+to offer a high degree of customization for offers made.  Complex contractual offers for solar power based on micro-grids, for example, would have a platform for achieving mass-exposure.  There are many, many important and beneficial ideas that have no way of reaching mass-markets because they lack a platform that is both sufficiently innovative and general.  The classifieds section of this newspaper app could supply this, since it will be coupled with the payment infrastructure required for the news feature.
+
+Question: Is the classifieds/marketplace feature necessary?
+
+A conversation between Ali G and Noam Chomsky is pertinent to the design decision to include not just a news feature, but also a full-scale marketplace - despite the
+possibility that it could divert focus from news, add time to the development, etc.  Ali asks Chomsky why he can't just invent his own language with words like "" for "".
+Chomsky tells him basically that no one would give a damn; language requires speakers to collectively agree on definitions.  I am keenly aware, as I propose a complex solution
+to a problem tied to real-world interests, that a solution that is effective at a personal or small-scale will be another case of who-gives-a-damn.  This is also the dilemma facing
+all of the world's most noble news organizations; news must be widely read and accepted to be effective, but the fact that they report on real, complex issues means they are not easily
+consumed by mass audiences.  I will refer to the problem of mass-appeal as the WGAD (Who-gives-a-damn) from hereon-out.
+
+Now, imagine that someone decides to
+
+
+
+Use-Cases:
