@@ -1,5 +1,5 @@
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <script src="https://unpkg.com/vue@2.0.6/dist/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/js/bootstrap.js"></script>
@@ -7,68 +7,86 @@
     <script src="js/typed.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
- <link href="https://fonts.googleapis.com/css?family=Domine|Montserrat|Nunito|Reem+Kufi|Slabo+27px|Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Domine|Montserrat|Nunito|Reem+Kufi|Slabo+27px|Ubuntu" rel="stylesheet">
 
- <link href="css/index.css" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css?family=Devonshire|Dr+Sugiyama|Quintessential" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Devonshire|Dr+Sugiyama|Quintessential" rel="stylesheet">
 </head>
 <body background="sunset.jpg">
+    <div id="app">
+        <div id="banner">
+            <div id="title">
+                <h1>DAVID JOSEPH</h1>
+            </div>
+            <div id="subtitle">
+                <h2>web developer, writer, translator, linguist</h2>
 
-  <div id="banner">
-    <div id="title">
-      <h1>DAVID JOSEPH</h1>
-    </div>
-    <div id="subtitle">
-      <h2>a smörgåsbord of:<br></h2>
-
-    </div>
-    <div id="tags"></div>
-    <div id="row1" class="row">
-      <div id="to-about" class="col-md-3"><button class="btn btn-block"><h3>About</h3></button></div>
-      <div id="to-blog" class="col-md-3"><button class="btn btn-block"><h3>Blog</h3></button></div>
-      <div id="to-tutorials" class="col-md-3"><button class="btn btn-block"><h3>Tutorials</h3></button></div>
-      <div id="to-code" class="col-md-3"><button class="btn btn-block"><h3>Code</h3></button></div>
-    </div>
-    <div id="row2" class="row">
-      <div id="to-projects" class="col-md-3"><button class="btn btn-block"><h3>Projects</h3></button></div>
-      <div id="tools" class="col-md-3"><button class="btn btn-block"><h3>Tools</h3></button></div>
-      <div id="schedule" class="col-md-3"><button class="btn btn-block"><h3>Schedule</h3></button></div>
-      <div id="to-contact" class="col-md-3"><button class="btn btn-block"><h3>Contact</h3></button></div>
-    </div>
+            </div>
+            <div id="tags"></div>
+            <div id="row1" class="row">
+                <div id="to-about" class="col-md-3"><button class="btn btn-block" @click="cv=true"><h3>CV</h3></button></div>
+                <div id="to-blog" class="col-md-3"><button class="btn btn-block"><h3>Blog</h3></button></div>
+                <div id="to-tutorials" class="col-md-3"><button class="btn btn-block"><h3>Tutorials</h3></button></div>
+                <div id="to-code" class="col-md-3"><button class="btn btn-block"><h3>Code</h3></button></div>
+            </div>
+            <div id="row2" class="row">
+                <div id="to-projects" class="col-md-3"><button class="btn btn-block"><h3>Projects</h3></button></div>
+                <div id="tools" class="col-md-3"><button class="btn btn-block"><h3>Tools</h3></button></div>
+                <div id="schedule" class="col-md-3"><button class="btn btn-block"><h3>Schedule</h3></button></div>
+                <div id="to-contact" class="col-md-3"><button class="btn btn-block"><h3>Contact</h3></button></div>
+            </div>
 
 
-  </div>
-
-  <div id="content">
-      <div id="about"></div>
-      <div id="blog" v-show="blog==true"></div>
-      <div id="tutorials"></div>
-      <div id="projects"></div>
-      <div id="code"></div>
-      <div id="tools">
-        <div id="technology">
-          <div id="programmer"></div>
-          <div id="writer"></div>
-          <div id="artist"></div>
         </div>
-        <div id="mnemonics">
-          <div id="loci"></div>
-        </div>
-        <div id="health">
-          <div id=""></div>
-          <div id=""></div>
-        </div>
-        <div id="philosophy">
-        </div>
-        <div id="logic"></div>
-        <div id="authors"></div>
-        <div id="music"></div>
-      </div>
-      <div id="training"></div>
-      <div id="schedule"></div>
-      <div id="contact"></div>
-  </div>
+        <modal id="cv-modal" v-show="cv">
+            <div slot="header">
+                David's Curriculum Vitae
+            </div>
+            <div slot="body">
+                <ul>
+                    <li>Skills</li>
+                    <li>Languages</li>
+                    <li>Hobbies</li>
+                    <li>Interests</li>
+                </ul>
+            </div>
+
+        </modal>
 
 </body>
+    </div>
 
- <script src="js/index.js"></script>
+
+    <template id="modal-template">
+        <transition name="modal">
+            <div class="modal-mask">
+                <div class="modal-wrapper">
+                    <div class="modal-container">
+
+                        <div class="modal-header">
+                            <slot name="header">
+                                
+                            </slot>
+                        </div>
+
+                        <div class="modal-body">
+                            <slot name="body">
+                            </slot>
+                        </div>
+
+                        <div class="modal-footer">
+                            <slot name="footer">
+                
+                                <button class="modal-default-button" @click="$emit('close')">
+                                    close
+                                </button>
+                            </slot>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </transition>
+    </template>
+
+
+    <script src="js/index.js"></script>
