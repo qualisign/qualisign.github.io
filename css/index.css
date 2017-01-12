@@ -3,14 +3,14 @@ body {
 }
 
 h1 {
-    font-family: Slabo, monospace;
+    font-family: Reem Kufi, monospace;
     color: lightblue;
-    text-shadow: 2px 1px rgb(200, 50, 150); 
+    text-shadow: 2px 1px 3px rgb(200, 50, 150); 
 
 }
 
 h2 {
-    font-family: cursive;
+    font-family: Reem Kufi, monospace;
     color: white;
     font-size: 20px;
     font-weight: 100;
@@ -18,7 +18,7 @@ h2 {
 }
 
 h3 {
-    font-family: Slabo, monospace;    
+    font-family: Reem Kufi, monospace;
     font-size: 26px;
 }
 
@@ -105,7 +105,7 @@ h3 {
 }
 
 .modal-container {
-  width: 300px;
+  width: 800px;
   margin: 0px auto;
   padding: 20px 30px;
   background-color: #fff;

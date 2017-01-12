@@ -5,10 +5,19 @@ var vm = new Vue({
         blog: false,
         
 
+    },
+    methods: {
+
     }
 });
 
 
 Vue.component('modal', {
-    template: '#modal-template'
+    template: '#modal-template',
+    methods: {
+        close: function(){
+            vm.cv = false;
+            vm.blog = false;
+        }        
+    }
 })
